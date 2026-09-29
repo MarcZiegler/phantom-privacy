@@ -1,0 +1,76 @@
+# Data and model weights (large, possibly private)
+datasets/
+preprocessed/
+models/
+results/
+images/
+.opencode/
+graphify-out/
+*.jsonl
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+
+# Git
+.git/
+.gitignore
+
+# Environment files (may contain cluster credentials / user-specific settings)
+.env
+
+# Singularity/Docker build artifacts
+*.sif
+*.tar
+Dockerfile
+.dockerignore
+
+# Papers
+papers/
+
+# Local-only directories (not part of the public toolkit)
+legacy/
+figures/
+docs/
+cluster-docs/
+.drawio-tmp/
+outputs/

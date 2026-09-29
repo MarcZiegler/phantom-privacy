@@ -1,0 +1,84 @@
+{
+  "schema_name": "default-email-pii",
+  "description": "Default zero-shot entity and relation schema for building a user-level PII graph from email-style corpora. Uses GLiNER for entities and GLiREL for relations.",
+  "entity_labels": {
+    "PERSON": "A human individual, including first names, full names, and pronouns resolved to a person.",
+    "EMAIL_ADDRESS": "An email address.",
+    "PHONE_NUMBER": "A telephone, mobile, office, or fax number.",
+    "AGE": "A number expressing a person's age in years, often following words like 'aged' or 'years old'.",
+    "DATE": "A calendar date, time period, or temporal expression such as a date of birth.",
+    "CITY": "A city, town, or populated place name.",
+    "COUNTRY": "A country, nation, or sovereign state.",
+    "NATIONALITY": "A nationality, citizenship, or ethnicity.",
+    "ORGANIZATION": "A company, institution, agency, employer, or other organized group.",
+    "JOB_TITLE": "A job title, role, or position such as 'CEO' or 'engineer'.",
+    "HOME_ADDRESS": "A postal or street address where a person lives or works.",
+    "NAME": "The canonical full name of a person, used as an identity signal when email addresses are unavailable."
+  },
+  "relation_labels": {
+    "has_email_address": {
+      "description": "The person uses or owns the email address.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["EMAIL_ADDRESS"]
+    },
+    "has_phone_number": {
+      "description": "The person uses or owns the phone number.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["PHONE_NUMBER"]
+    },
+    "has_age": {
+      "description": "The person's age in years.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["AGE"]
+    },
+    "born_on_date": {
+      "description": "The person's date of birth.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["DATE"]
+    },
+    "lives_in_city": {
+      "description": "The person lives in the city.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["CITY"]
+    },
+    "lives_in_country": {
+      "description": "The person lives in the country.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["COUNTRY"]
+    },
+    "country_of_origin": {
+      "description": "The person's country of origin or nationality.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["COUNTRY", "NATIONALITY"]
+    },
+    "works_at_organization": {
+      "description": "The person is employed by or works at the organization.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["ORGANIZATION"]
+    },
+    "has_job_title": {
+      "description": "The person's job title or role.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["JOB_TITLE"]
+    },
+    "has_home_address": {
+      "description": "The person's home or work address.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["HOME_ADDRESS"]
+    },
+    "has_name": {
+      "description": "The person's canonical full name.",
+      "allowed_head": ["PERSON"],
+      "allowed_tail": ["NAME"]
+    }
+  },
+  "default_thresholds": {
+    "gliner_entity": 0.5,
+    "glirel_relation": 0.7
+  },
+  "notes": [
+    "This schema is intentionally conservative: heads are always PERSON so every extracted fact is attributed to a user.",
+    "Add custom relations by creating a new JSON file with the same structure, e.g. {'has_car': {'allowed_head': ['PERSON'], 'allowed_tail': ['VEHICLE']}}.",
+    "GLiNER zero-shot labels can be passed as plain strings or as a {label: description} dict. Descriptions usually improve accuracy for rare labels."
+  ]
+}

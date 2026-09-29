@@ -1,0 +1,8 @@
+{
+  "min_num_params": 0,
+  "transformer_layer_cls_to_wrap": "LlamaDecoderLayer",
+  "state_dict_type": "FULL_STATE_DICT",
+  "backward_prefetch": "BACKWARD_PRE",
+  "cpu_offload": false,
+  "limit_all_gathers": true
+}

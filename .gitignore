@@ -1,0 +1,96 @@
+# Datasets, models and processed outputs (may contain PII)
+datasets/
+models/
+preprocessed/
+figures/
+results/
+*.jsonl
+
+# Private keys and credentials
+*.pem
+.env
+
+# Papers (local only)
+papers/
+
+# Local exploration / scratch files
+local/
+tmp/
+
+# Archived / out-of-scope experiments (kept for reference, not active)
+legacy/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Launcher output directories
+outputs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+
+
+# images
+images/
+*.sif
+*.tar
+
+# Temporary debug logs
+*.log
+error.txt
+
+# OpenCode per-user configuration
+.opencode/
+
+# Graphify generated knowledge graph
+graphify-out/
+
+# Drawio tmp stuff
+.drawio-tmp/
+
+# Local documentation and paper assets (kept locally, not in the public branch)
+docs/
+cluster-docs/
+
+# Third-party data files that must be downloaded/provided by the user
+configs/pii_graph_job_titles.txt
+configs/pii_graph_common_words.txt

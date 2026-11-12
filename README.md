@@ -364,15 +364,17 @@ uv run ruff check .
 
 ## Citation
 
-If you use this toolkit or the Phantom-Privacy datasets in your research, please cite our demo paper:
+If you use this toolkit or the Phantom-Privacy datasets in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{ziegler2026phantom,
-  title={Demo: Phantom-Privacy: A Toolkit for Auditing Cross-User PII Leakage in Fine-Tuned {LLMs}},
-  author={Ziegler, Marc and Errounda, Fatima Zahra},
-  booktitle={To be determined},
-  year={2026},
-  note={Paper submitted to IEEE Big Data 2026 and under review}
+  title     = {Demo: {Phantom-Privacy}: A Toolkit for Auditing Cross-User {PII} Leakage in Fine-Tuned {LLMs}},
+  author    = {Ziegler, Marc and Errounda, Fatima Zahra},
+  booktitle = {2026 IEEE International Conference on Big Data (BigData)},
+  address   = {Phoenix, AZ, USA},
+  month     = dec,
+  year      = {2026},
+  note      = {To appear in the Special Session on Security and Privacy of Big Data}
 }
 ```
 
